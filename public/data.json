@@ -1,0 +1,64 @@
+
+   [
+    {
+      "id": "8734f23b-c7f5-4f27-9e3b-390c2e4f1245",
+      "title": "Software Engineer",
+      "name": "Acme Corp",
+      "image": "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "San Francisco, CA",
+      "salary": "$120,000 - $150,000",
+      "time": "Full Time",
+      "type": "Onsite"
+    },
+    {
+      "id": "c3f79a8c-f384-422f-9e9f-1f6c88d6e000",
+      "title": "Data Analyst",
+      "name": "Globex Corp",
+      "image": "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "New York, NY",
+      "salary": "$90,000 - $110,000",
+      "time": "Full Time",
+      "type": "Onsite"
+    },
+    {
+      "id": "d6a132a9-0cb6-45d6-9a9b-89f8c7b52418",
+      "title": "Marketing Manager",
+      "name": "Initech",
+      "image": "https://images.pexels.com/photos/6930556/pexels-photo-6930556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Austin, TX",
+      "salary": "$80,000 - $100,000",
+      "time": "Full Time",
+      "type": "Remote"
+    },
+    {
+      "id": "7f991ba6-8c6e-47a9-a150-b7a758dc07c1",
+      "title": "Customer Support Specialist",
+      "name": "Umbrella Corp",
+      "image": "https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Raccoon City, USA",
+      "salary": "$50,000 - $70,000",
+      "time": "Full Time",
+      "type": "Offsite"
+    },
+    {
+      "id": "f2b2d045-2326-4b6e-a36d-35e6f11a6a8c",
+      "title": "Graphic Designer",
+      "name": "Stark Industries",
+      "image": "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Los Angeles, CA",
+      "salary": "$70,000 - $90,000",
+      "time": "Full Time",
+      "type": "Onsite"
+    },
+    {
+      "id": "34bf0a6d-d1f5-4d69-9cc5-45f8903f4a2c",
+      "title": "Content Writer",
+      "name": "Wayne Enterprises",
+      "image": "https://images.pexels.com/photos/1766604/pexels-photo-1766604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Gotham City, USA",
+      "salary": "$60,000 - $80,000",
+      "time": "Part Time",
+      "type": "Remote"
+    }
+  ]
+
