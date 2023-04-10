@@ -1,14 +1,44 @@
+import React from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+import Home from "./Component/Home/Home";
+import Main from "./Component/Layout/Main";
+import PageNotFound from "./Component/PageNotFound/PageNotFound";
+const router = createBrowserRouter([
+ 
+  {
+        path: '/',
+        element: <Main></Main>,
+        children: [
+            {
+                path: '/home',
+                element: <Home></Home>
+          },
+          {
+            path: '/a',
+            element: <p1>Hello dear</p1>
+          }
+        ]
+        },
+{
+    path: '*',
+    element: <PageNotFound></PageNotFound>
+},
+]);
 
-import './App.css'
+
 
 function App() {
 
 
   return (
-    <div className="App">
+    <div>
       
-      <h1>Hello</h1>
-      <h1>I love ALLAH</h1>
+      <RouterProvider router={router} />
     </div>
   )
 }
