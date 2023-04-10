@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from "react-router-dom";
 function NavMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,10 +12,10 @@ function NavMenu() {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline font-bold space-x-4">
-              <a href="#" className="text-[#00008B] hover:text-gray-900">Home</a>
-              <a href="#" className="text-[#00008B] hover:text-gray-900">Applied Jobs</a>
-              <a href="#" className="text-[#00008B] hover:text-gray-900">Statistics</a>
-              <a href="#" className="text-[#00008B] hover:text-gray-900">Blog</a>
+              <Link to="/home" className="text-[#00008B] hover:text-gray-900">Home</Link>
+              <Link to="/jobs" className="text-[#00008B] hover:text-gray-900">Applied Jobs</Link>
+              <Link to="/statistics" className="text-[#00008B] hover:text-gray-900">Statistics</Link>
+              <Link to="/blog" className="text-[#00008B] hover:text-gray-900">Blog</Link>
             </div>
           </div>
           <div className="hidden md:block">
@@ -36,9 +36,10 @@ function NavMenu() {
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Home</a>
-          <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Statistics</a>
-          <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Blog</a>
+          <Link to="/home" className="text-[#00008B] hover:text-gray-900">Home</Link>
+              <Link to="/jobs" className="text-[#00008B] hover:text-gray-900">Applied Jobs</Link>
+              <Link to="/statistics" className="text-[#00008B] hover:text-gray-900">Statistics</Link>
+              <Link to="/blog" className="text-[#00008B] hover:text-gray-900">Blog</Link>
         </div>
         <div className="py-2 px-4 text-black ">
           <button className="w-full bg-gradient-to-r from-lime-900 via-slate-50 to-lime-900 text-black font-semibold px-4 py-2 rounded hover:bg-blue-800">Start Applying</button>
