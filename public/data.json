@@ -1,6 +1,7 @@
 
    [
     {
+      "_id": "1",
       "id": "8734f23b-c7f5-4f27-9e3b-390c2e4f1245",
       "title": "Software Engineer",
       "name": "Acme Corp",
@@ -11,6 +12,7 @@
       "type": "Onsite"
     },
     {
+      "_id": "2",
       "id": "c3f79a8c-f384-422f-9e9f-1f6c88d6e000",
       "title": "Data Analyst",
       "name": "Globex Corp",
@@ -21,6 +23,7 @@
       "type": "Onsite"
     },
     {
+      "_id": "3",
       "id": "d6a132a9-0cb6-45d6-9a9b-89f8c7b52418",
       "title": "Marketing Manager",
       "name": "Initech",
@@ -31,6 +34,7 @@
       "type": "Remote"
     },
     {
+      "_id": "4",
       "id": "7f991ba6-8c6e-47a9-a150-b7a758dc07c1",
       "title": "Customer Support Specialist",
       "name": "Umbrella Corp",
@@ -41,6 +45,7 @@
       "type": "Offsite"
     },
     {
+      "_id": "5",
       "id": "f2b2d045-2326-4b6e-a36d-35e6f11a6a8c",
       "title": "Graphic Designer",
       "name": "Stark Industries",
@@ -51,6 +56,7 @@
       "type": "Onsite"
     },
     {
+      "_id": "6",
       "id": "34bf0a6d-d1f5-4d69-9cc5-45f8903f4a2c",
       "title": "Content Writer",
       "name": "Wayne Enterprises",
