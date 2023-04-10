@@ -11,8 +11,9 @@ const FeatureJob = () => {
   const dataToShow = showAll ? features : limitedData;
     console.log(features)
     return (
-        <div>
-            {
+        <div className='container mx-auto my-5' >
+            <div className="grid  lg:grid-cols-2 gap-4 ">
+{
                 dataToShow.map(feature => <Home
                 
                     key={feature.id}
@@ -22,6 +23,9 @@ const FeatureJob = () => {
                     
                </Home> ) 
             }
+            </div>
+            
+            
             <div className='bg-blue-600 text-center w-32'>
  {!showAll &&
         <button  onClick={() => setShowAll(true)}>See All Details</button>
