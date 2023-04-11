@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import FeatureJob from "./Component/FeatureJob/FeatureJob";
 import Home from "./Component/Home/Home";
+import JobsDetails from "./Component/JobsDetails/JobsDetails";
 import Main from "./Component/Layout/Main";
 import PageNotFound from "./Component/PageNotFound/PageNotFound";
 const router = createBrowserRouter([
@@ -16,14 +17,20 @@ const router = createBrowserRouter([
         element: <Main></Main>,
         children: [
             {
-                path: '/job',
+                path: '/',
                 element: <Home></Home>
           },
            {
                 path: "/home",
                 element: <FeatureJob></FeatureJob>,
-              loader: ()  => fetch('data.json') 
-            },
+              loader: ()  => fetch('/data.json') 
+          },
+          {
+              path: "/job/:id",
+                element: <JobsDetails></JobsDetails>
+                // loader: ({params}) => fetch(`description.json/home/${params.id}`)
+            }
+       
         ]
         },
 {
