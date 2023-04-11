@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {  useParams } from 'react-router-dom';
+ import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const JobsDetails = () => {
     const dataDisplay = useParams();
@@ -18,7 +20,25 @@ data.find((d) => {
       details = { ...d };
     }
   });
-
+  function handleApplyNowClick() {
+    const jobData = { _id: details._id};
+   
+//  localStorage.setItem('job', JSON.stringify(jobData));
+//     localStorage.setItem('quantity', 1);
+      const existingJobData = JSON.parse(localStorage.getItem('job'));
+  
+  if ( existingJobData._id === jobData._id) {
+    // User has already applied for this job
+    toast.error('You have already applied for this job.');
+  } else {
+      toast.success('Job application submitted successfully!');
+    localStorage.setItem('job', JSON.stringify(jobData));
+    localStorage.setItem('quantity', quantity);
+  
+  }
+      
+      
+  }
 
 console.log(details.jobTitle);
 
@@ -61,11 +81,23 @@ console.log(details.jobTitle);
       
                         <p class="text-gray-700">Address: {details.address}</p>
       
-      <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Apply Now</a>
+        {/*  Contact information button here  */}
+      <button onClick={handleApplyNowClick} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Apply Now</button>
     </div>
   </div>
 </div>
-
+<ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+/>
         </div>
     );
 };
