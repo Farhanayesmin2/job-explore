@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineDollar } from "react-icons/ai";
 import { HiArrowUturnUp } from "react-icons/hi2";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData , useNavigate} from "react-router-dom";
 const AppliedData = () => {
-
+ const navigate = useNavigate()
 const data  = useLoaderData()
 
  const [remote, setRemote] = useState(false);
@@ -148,7 +148,7 @@ data.find((jd) => {
                       {item.salary}
                     </p>
                   </div>
-                  <button
+                  <button onClick={() => navigate(`/job/${item.id}`)} 
                     type="button"
                     className="text-white bg-gradient-to-r from-indigo-500 via-purple-600 to-indigo-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                   >

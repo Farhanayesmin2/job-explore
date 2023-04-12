@@ -17,7 +17,7 @@ const JobCategory = () => {
             <div className="bg-gray-100">
   <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     {data.map(category => (
-      <div key={category.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+      <div  className="bg-white rounded-lg shadow-md overflow-hidden">
         <img src={category.image} alt={category.title} className="w-full h-40 object-cover object-center" />
         <div className="p-6">
           <h3 className="text-xl font-semibold mb-4">{category.title}</h3>
