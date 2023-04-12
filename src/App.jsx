@@ -6,6 +6,7 @@ import {
   Link,
 } from "react-router-dom";
 import AppliedData from "./Component/AppliedData/AppliedData";
+import Blog from "./Component/Blog/Blog";
 import FeatureJob from "./Component/FeatureJob/FeatureJob";
 import Home from "./Component/Home/Home";
 import JobsDetails from "./Component/JobsDetails/JobsDetails";
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
           {
             path: "/jobs",
             element: <AppliedData></AppliedData>
+          },
+          {
+            path: "/blog",
+            element: <Blog></Blog>
           }
        
         ]
