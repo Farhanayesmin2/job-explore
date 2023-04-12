@@ -5,6 +5,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import AppliedData from "./Component/AppliedData/AppliedData";
 import FeatureJob from "./Component/FeatureJob/FeatureJob";
 import Home from "./Component/Home/Home";
 import JobsDetails from "./Component/JobsDetails/JobsDetails";
@@ -29,7 +30,11 @@ const router = createBrowserRouter([
               path: "/job/:id",
                 element: <JobsDetails></JobsDetails>
                 // loader: ({params}) => fetch(`description.json/home/${params.id}`)
-            }
+          },
+          {
+            path: "/jobs",
+            element: <AppliedData></AppliedData>
+          }
        
         ]
         },

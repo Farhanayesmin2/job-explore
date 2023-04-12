@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import {  useParams } from 'react-router-dom';
+import {  useParams,Link } from 'react-router-dom';
  import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+
 
 const JobsDetails = () => {
     const dataDisplay = useParams();
     
     const [data, setData] = useState([])
+ 
+  
     
     let details = {};
     useEffect( () =>{
@@ -20,25 +23,53 @@ data.find((d) => {
       details = { ...d };
     }
   });
-  function handleApplyNowClick() {
-    const jobData = { _id: details._id};
+//   function handleApplyNowClick() {
+//     const jobData = { _id: details._id};
+
+//      const newData = {...jobData}
+    
+//         //   const dataAdd = [...apply,applyData];
+//         //   setApply(dataAdd);
+
+      
+//       const quantity = 1;
    
-//  localStorage.setItem('job', JSON.stringify(jobData));
-//     localStorage.setItem('quantity', 1);
-      const existingJobData = JSON.parse(localStorage.getItem('job'));
+// //  localStorage.setItem('job', JSON.stringify(jobData));
+// //     localStorage.setItem('quantity', 1);
+//       const existingJobData = JSON.parse(localStorage.getItem('job')) || [];
   
-  if ( existingJobData._id === jobData._id) {
+//       if (existingJobData && existingJobData._id === jobData._id) {
+      
+          
+//             toast.error('You have already applied for this job.');
+//   } else{
+//       toast.success('Job application submitted successfully!');
+//           localStorage.setItem('job', JSON.stringify(jobData));
+          
+
+
+
+//     //    localStorage.setItem('job', JSON.stringify([...existingJobData, jobData._id]));
+//     localStorage.setItem('quantity', quantity);
+  
+//   }  
+        function handleApplyNowClick() {
+  const jobData = { _id: details._id };
+  const existingJobData = JSON.parse(localStorage.getItem('job')) || [];
+
+  if (existingJobData.includes(jobData._id)) {
     // User has already applied for this job
     toast.error('You have already applied for this job.');
   } else {
-      toast.success('Job application submitted successfully!');
-    localStorage.setItem('job', JSON.stringify(jobData));
-    localStorage.setItem('quantity', quantity);
+    toast.success('Job application submitted successfully!');
+    localStorage.setItem('job', JSON.stringify([...existingJobData, jobData._id]));
+  }
+}  
+    // User has already applied for this job
+    
+      
+      
   
-  }
-      
-      
-  }
 
 console.log(details.jobTitle);
 
@@ -81,8 +112,15 @@ console.log(details.jobTitle);
       
                         <p class="text-gray-700">Address: {details.address}</p>
       
-        {/*  Contact information button here  */}
-      <button onClick={handleApplyNowClick} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Apply Now</button>
+                        {/*  Contact information button here  */}
+                        
+
+           {/* <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">
+  <Link to={`/jobApply/${details._id}`} onClick={handleApplyNowClick}>Apply Now</Link>
+</button>                  */}
+ <button onClick={() => handleApplyNowClick()} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Apply Now</button>
+                        
+     
     </div>
   </div>
 </div>
@@ -97,7 +135,8 @@ pauseOnFocusLoss
 draggable
 pauseOnHover
 theme="colored"
-/>
+            />
+           
         </div>
     );
 };
