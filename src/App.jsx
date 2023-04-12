@@ -12,6 +12,7 @@ import Home from "./Component/Home/Home";
 import JobsDetails from "./Component/JobsDetails/JobsDetails";
 import Main from "./Component/Layout/Main";
 import PageNotFound from "./Component/PageNotFound/PageNotFound";
+import Statistics from "./Component/Statistics/Statistics";
 const router = createBrowserRouter([
  
   {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
           {
             path: "/blog",
             element: <Blog></Blog>
+          },
+       
+          {
+            path: "/statistics",
+            element: <Statistics></Statistics>
           }
        
         ]
