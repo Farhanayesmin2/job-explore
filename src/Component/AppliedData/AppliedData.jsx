@@ -4,6 +4,9 @@ import { AiOutlineDollar } from "react-icons/ai";
 const AppliedData = () => {
      const [data, setData] = useState([]);
 //   const [job, setJob] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [toggle1, setToggle1] = useState(false);
+  const [toggle2, setToggle2] = useState(false);
 
   useEffect(() => {
     fetch('/data.json')
@@ -28,6 +31,49 @@ const AppliedData = () => {
  
     return (
         <div>
+       <div className="relative inline-flex items-center divide-x rounded dark:bg-fuchsia-400 dark:text-gray-800 divide-gray-700">
+      <button type="button" className="px-8 py-3" onClick={() => setIsOpen(!isOpen)}>
+        Filter by
+      </button>
+      <button
+        type="button"
+        title="Toggle dropdown"
+        className="p-3"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <svg        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div className={`${isOpen ? 'block' : 'hidden'} absolute top-10  -right-1 bg-gray-100 p-2 rounded-b-lg`}>
+        <button
+          className={`block w-full py-2 px-4 text-gray-500 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 ${
+            isOpen ? 'mb-2' : ''
+                            }`}
+                      
+                        onClick={() => setIsOpen(false)}
+                        
+        >
+            Close
+        </button>
+        {isOpen && (
+          <>
+            <button className="py-2 px-4 text-gray-500 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900">Remote</button>
+            <button className="py-2 px-4 text-gray-500 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900">Onsite</button>
+            <button className="py-2 px-4 text-gray-500 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900">Offsite</button>
+          </>
+        )}
+      </div>
+    </div>  
+
+
+
+
+
+
+
+
+        
       {matchingData.map(item => (
       <div className="my-5  max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
   <div className="md:flex">
