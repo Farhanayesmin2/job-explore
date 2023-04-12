@@ -4,22 +4,22 @@ function NavMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" bg-lime-50 shadow-md">
+    <nav className=" bg-[#e4a5c2] shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-[#00008B]">Job Explore</div>
+            <div className="text-2xl font-bold text-[#774d62] ">Job Explore</div>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline font-bold space-x-4">
-              <Link to="/home" className="text-[#00008B] hover:text-gray-900">Home</Link>
-              <Link to="/jobs" className="text-[#00008B] hover:text-gray-900">Applied Jobs</Link>
-              <Link to="/statistics" className="text-[#00008B] hover:text-gray-900">Statistics</Link>
-              <Link to="/blog" className="text-[#00008B] hover:text-gray-900">Blog</Link>
+              <Link to="/home" className="text-[#774d62]  hover:text-gray-900">Home</Link>
+              <Link to="/jobs" className="text-[#774d62]  hover:text-gray-900">Applied Jobs</Link>
+              <Link to="/statistics" className="text-[#774d62]  hover:text-gray-900">Statistics</Link>
+              <Link to="/blog" className="text-[#774d62]  hover:text-gray-900">Blog</Link>
             </div>
           </div>
-          <div className="hidden md:block">
-            <button className="shadow-lg bg-blue-600  text-white font-semibold  px-4 py-2 rounded hover:bg-blue-950">Start Applying</button>
+          <div className="hidden md:block bg-[#774d62]">
+            <button className="shadow-lg    text-white font-semibold  px-4 py-2 rounded hover:bg-blue-950">Start Applying</button>
           </div>
           <div className="-mr-2 flex md:hidden">
             <button
@@ -35,14 +35,14 @@ function NavMenu() {
         </div>
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          <Link to="/home" className="text-[#00008B] hover:text-gray-900">Home</Link>
-              <Link to="/jobs" className="text-[#00008B] hover:text-gray-900">Applied Jobs</Link>
-              <Link to="/statistics" className="text-[#00008B] hover:text-gray-900">Statistics</Link>
-              <Link to="/blog" className="text-[#00008B] hover:text-gray-900">Blog</Link>
+        <div className="px-2 font-bold text-xl  pt-2 pb-3 space-y-1">
+          <Link to="/home" className="text-[#774d62] mx-2 hover:text-gray-900">Home</Link>
+              <Link to="/jobs" className="text-[#774d62] mx-2 hover:text-gray-900">Applied Jobs</Link>
+              <Link to="/statistics" className="text-[#774d62] mx-2 hover:text-gray-900">Statistics</Link>
+              <Link to="/blog" className="text-[#774d62] hover:text-gray-900">Blog</Link>
         </div>
-        <div className="py-2 px-4 text-black ">
-          <button className="w-full bg-gradient-to-r from-lime-900 via-slate-50 to-lime-900 text-black font-semibold px-4 py-2 rounded hover:bg-blue-800">Start Applying</button>
+        <div className="py-2 px-4 bg-gradient-to-br from-bg-[#774d62] to-bg-[#936d80] text-black ">
+          <button className="lg:w-full  bg-[#774d62] text-black font-semibold px-4 py-2 rounded hover:bg-blue-800">Start Applying</button>
         </div>
       </div>
     </nav>

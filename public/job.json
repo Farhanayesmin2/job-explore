@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Creative Design",
+    "description": "Design and create visual and graphic elements for marketing materials, websites, and other media.",
+    "jobs": 100,
+    "image": "https://source.unsplash.com/500x500/?design"
+  },
+  {
+    "id": 2,
+    "title": "Marketing & Sales",
+    "description": "Develop and implement marketing strategies and sales plans to promote products and services.",
+    "jobs": 150,
+    "image": "https://source.unsplash.com/500x500/?marketing"
+  },
+  {
+    "id": 3,
+    "title": "Engineering Job",
+    "description": "Develop, design, and test mechanical, electrical, and software systems and components.",
+    "jobs": 224,
+    "image": "https://source.unsplash.com/500x500/?engineering"
+  },
+  {
+    "id": 4,
+    "title": "Education",
+    "description": "Develop, design, and test mechanical, electrical, and software systems and components.",
+    "jobs": 89,
+    "image": "https://source.unsplash.com/500x500/?engineering"
+  }
+]

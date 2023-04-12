@@ -2,14 +2,17 @@
 import React from 'react';
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineDollar } from "react-icons/ai";
-import {  useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Header from '../Header/Header';
 const Home = ({feature}) => {
   const { id, name, title, time, type, image, salary, location } = feature;
 
    const navigate = useNavigate();
 
-  return (
-    <div>
+    return (
+      
+      <div>
+         
       <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <div className="md:flex">
           <div className="md:flex-shrink-0">

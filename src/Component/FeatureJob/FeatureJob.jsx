@@ -1,7 +1,9 @@
 
 import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import Header from '../Header/Header';
 import Home from '../Home/Home';
+import JobCategory from '../JobCategory/JobCategory';
 
 const FeatureJob = () => {
   const features = useLoaderData();
@@ -11,8 +13,12 @@ const FeatureJob = () => {
   const limitedData = features.slice(0, 4);
   const dataToShow = showAll ? features : limitedData;
 
-  return (
-    <div className="container mx-auto my-5" >
+    return (
+        <div>
+            <Header></Header>
+            <JobCategory></JobCategory>
+        <div className="container mx-auto my-5" >
+            
       <div className="grid lg:grid-cols-2 gap-4">
         {dataToShow.map((feature) => (
           <Home key={feature.id} feature={feature} />
@@ -25,6 +31,7 @@ const FeatureJob = () => {
           
         )}
       </div>
+    </div>
     </div>
   );
 };
